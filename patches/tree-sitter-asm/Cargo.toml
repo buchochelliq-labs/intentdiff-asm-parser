@@ -1,0 +1,18 @@
+[package]
+name = "tree-sitter-asm"
+version = "0.24.0"
+edition = "2021"
+license = "MIT"
+# Patched: parser.c pre-compiled to lib/libtree_sitter_asm.a for wasm32-wasip2.
+build = "build.rs"
+autolib = false
+
+[lib]
+name = "tree_sitter_asm"
+path = "bindings/rust/lib.rs"
+
+[dependencies.tree-sitter-language]
+version = "0.1"
+
+[build-dependencies]
+cc = "1"
