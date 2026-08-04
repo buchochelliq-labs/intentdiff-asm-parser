@@ -1,8 +1,8 @@
 [package]
-name = "intentdiff-asm-parser"
+name = "intentumdiff-asm-parser"
 version = "0.1.0"
 edition = "2021"
-description = "Assembly parser plugin for IntentDiff (interpret-cst mode)"
+description = "Assembly parser plugin for IntentumDiff (interpret-cst mode)"
 license = "MIT"
 publish = false
 
@@ -10,14 +10,14 @@ publish = false
 crate-type = ["cdylib"]
 
 [dependencies]
-intentdiff-plugin-sdk = { git = "https://github.com/buchochelliq-labs/intentdiff-plugin-sdk", tag = "v0.1.0" }
+intentumdiff-plugin-sdk = { git = "https://github.com/buchochelliq-labs/intentumdiff-plugin-sdk", tag = "v0.1.0" }
 serde_json = "1"
 wit-bindgen = { version = "0.57", default-features = false, features = ["std", "macros"] }
 tree-sitter = "0.25"
 tree-sitter-asm = "0.24"
 
 [dev-dependencies]
-intentdiff-plugin-sdk = { git = "https://github.com/buchochelliq-labs/intentdiff-plugin-sdk", tag = "v0.1.0", features = ["testing"] }
+intentumdiff-plugin-sdk = { git = "https://github.com/buchochelliq-labs/intentumdiff-plugin-sdk", tag = "v0.1.0", features = ["testing"] }
 
 # Plugins target WASI p2 (Component Model); mirrors the monorepo's certified build profile.
 [profile.release]
